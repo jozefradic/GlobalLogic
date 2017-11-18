@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Profil</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body >
+<div class="container">
+<div><img src="im.png" class="img-circle"></div>
+<h1>Jozef Radič</h1>
+</br>
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'About me')">About me</button>
+  <button class="tablinks" onclick="openTab(event, 'My skills')">My skills</button>
+  <button class="tablinks" onclick="openTab(event, 'My Hobbies')">My Hobbies</button>
+</div>
+
+<div id="About me" class="tabcontent">
+  <p>First Name: Jozef </br> Last Name: Radič</br> Email: radicjozef@gmail.com</br> Phone: 0999876543</p>
+</div>
+
+<div id="My skills" class="tabcontent">
+  <p>IT Skills</p>
+<ol>
+  <li>C junior</li>
+  <li>CSS and HTML junior</li>
+  <li>JS junior</li>
+</ol></br>
+  <p>Skills</p>
+<ol>
+  <li>Leadership</li>
+  <li>Communication</li>
+  <li>Teamwork</li>
+</ol>
+</div>
+
+<div id="My Hobbies" class="tabcontent">
+  <p>My Hobbies are building plastic models, </br> restoring historical car,shooting with</br> handguns at training facilities. </p>
+</div>
+</br>
+<div>
+<a href="https://facebook.com"><img title="facebook" class="fa" src="facebook.png" width="35" height="35"></a>
+<a href="https://gmail.com"><img title="gmail" src="gmail.png" class="fa" width="35" height="35"></a>
+<a href="https://skype.com"><img title="skype" src="skype.png" class="fa" width="35" height="35"></a></div>
+</div>
+<script type="text/javascript">
+  function openTab(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+</script>
+</body>
+</html>
